@@ -105,12 +105,12 @@ public:
   {
   }
   
-  explicit Configuration( const Configuration &amp; other )
+  explicit Configuration( const Configuration & other )
     :  m_ourCoolValue( other.ourCoolValue() )
   {
   }
   
-  Configuration &amp; operator = ( const Configuration &amp; other )
+  Configuration & operator = ( const Configuration & other )
   {
     if( this != &other )
     {
@@ -125,7 +125,7 @@ public:
   }
   
   //! \return Our cool value.
-  const QString &amp; ourCoolValue() const
+  const QString & ourCoolValue() const
   {
     return m_ourCoolValue;
   }
@@ -151,7 +151,7 @@ public:
   {
   }
   
-  explicit TagConfiguration( const Configuration &amp; cfg )
+  explicit TagConfiguration( const Configuration & cfg )
     :  QtConfFile::TagNoValue( QLatin1String( "configuration" ), true )
     ,  m_ourCoolValue( *this, QLatin1String( "ourCoolValue" ), true )
   {
@@ -213,7 +213,7 @@ try {
   
   cfg = readTag.cfg();
 }
-catch( const QtConfFile::Exception &amp; x )
+catch( const QtConfFile::Exception & x )
 {
   qDebug() << x.whatAsQString();
 }
@@ -230,7 +230,7 @@ try {
   QtConfFile::writeQtConfFile( writeTag, QLatin1String( "fileName.cfg" ),
     QTextCodec::codecForName( "UTF-8" ) );
 }
-catch( const QtConfFile::Exception &amp; x )
+catch( const QtConfFile::Exception & x )
 {
   qDebug() << x.whatAsQString();
 }
@@ -314,9 +314,9 @@ public:
   ~d_tor();
     
   //! \return fieldWithQString value.
-  const QString &amp; fieldWithQString() const;
+  const QString & fieldWithQString() const;
   //! Set fieldWithQString value.
-  void setFieldWithQString( const QString &amp; value );
+  void setFieldWithQString( const QString & value );
 }; // class NameOfTheClass
   
   
