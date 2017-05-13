@@ -118,7 +118,7 @@ static inline ForGeneration parseCommandLineArguments( int argc, char ** argv )
 
 	QtArgCmdLine cmd( argc, argv );
 
-	QtArgHelp help( &cmd );
+	QtArgHelp help;
 	help.setProgramDescription(
 		QLatin1String( "C++ header generator for QtConfFile." ) );
 	help.setExecutableName( QLatin1String( argv[ 0 ] ) );
